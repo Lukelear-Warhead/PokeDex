@@ -25,6 +25,9 @@ class ViewController: UIViewController {
 		
 		collection.delegate = self
 		collection.dataSource = self
+		searchBar.delegate = self
+		
+		searchBar.returnKeyType = .Done
 		
 		parsePokemonCSV()
 		//initAudio()
@@ -68,6 +71,15 @@ class ViewController: UIViewController {
 			print(err.debugDescription)
 		}
 	}
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "PokemonDetailVC" {
+			if let detailVC = segue.destinationViewController as? PokemonDetailVC,
+			let poke = sender as? Pokemon {
+				detailVC.pokemon = poke
+			}
+		}
+	}
 
 
 }
@@ -78,6 +90,8 @@ extension ViewController: UISearchBarDelegate {
 	func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
 		if searchBar.text == nil || searchBar.text == "" {
 			inSearchMode = false
+			view.endEditing(true)
+			collection.reloadData()
 		} else {
 			inSearchMode = true
 			let lower = searchBar.text!.lowercaseString
@@ -86,6 +100,9 @@ extension ViewController: UISearchBarDelegate {
 		}
 		
 	}
+	func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+		view.endEditing(true)
+	}
 }
 
 // MARK: - UICollectionViewDelegate
@@ -93,6 +110,14 @@ extension ViewController: UISearchBarDelegate {
 extension ViewController: UICollectionViewDelegate {
 	func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 		
+		let poke: Pokemon!
+		
+		if inSearchMode {
+			poke = filteredPokemon[indexPath.row]
+		} else {
+			poke = pokemon[indexPath.row]
+		}
+		performSegueWithIdentifier("PokemonDetailVC", sender: poke)
 	}
 	
 }
