@@ -226,7 +226,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="x9u-Jq-IRe">
                                 <rect key="frame" x="20" y="63" width="560" height="362"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k3b-Hl-WtA">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="k3b-Hl-WtA">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="362"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="whL-aY-O3G">
@@ -276,8 +276,8 @@
                                                     </stackView>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="LuR-hv-7Cp">
-                                                <rect key="frame" x="0.0" y="263" width="560" height="99"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LuR-hv-7Cp">
+                                                <rect key="frame" x="0.0" y="233" width="560" height="129"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="t1W-kY-bHA">
                                                         <rect key="frame" x="0.0" y="0.0" width="560" height="23"/>
@@ -319,7 +319,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jk9-Qj-IM9">
-                                                        <rect key="frame" x="0.0" y="38" width="560" height="23"/>
+                                                        <rect key="frame" x="0.0" y="53" width="560" height="23"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WQ9-ez-UQW">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="23"/>
@@ -358,7 +358,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="jYD-TR-yMf">
-                                                        <rect key="frame" x="0.0" y="76" width="560" height="23"/>
+                                                        <rect key="frame" x="0.0" y="106" width="560" height="23"/>
                                                         <subviews>
                                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aZv-2b-s9q">
                                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="23"/>
@@ -423,7 +423,7 @@
                     <connections>
                         <outlet property="baseAttackLabel" destination="EUN-xt-Gk5" id="Uqw-gh-HMV"/>
                         <outlet property="currentEvolution" destination="Ifk-c1-2I1" id="TcT-FE-gjI"/>
-                        <outlet property="defenseLabel" destination="4fm-RA-pFr" id="eK2-NW-JQb"/>
+                        <outlet property="defenseLabel" destination="wdg-3a-VA2" id="zkf-9s-rZc"/>
                         <outlet property="desctiptionLabel" destination="O3u-96-1kt" id="r0G-SQ-Vjk"/>
                         <outlet property="heightLabel" destination="gjI-Tf-FSF" id="PKI-GV-yU5"/>
                         <outlet property="mainImage" destination="A0e-Cv-Zfg" id="bgX-Lr-lDm"/>
